@@ -153,5 +153,9 @@ echo "a.com {
 }" >> /usr/local/caddy/Caddyfile
 /etc/init.d/caddy restart
 ```
+#Google Drive
+分享链接一般是https://drive.google.com/drive/folders/xxxx?usp=sharing，则ID为xxxx。
+#OneDrive
+分享链接一般是https://1drv.ms/f/xxxx，则ID为xxxx。
 
 
