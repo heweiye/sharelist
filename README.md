@@ -113,7 +113,22 @@ OR
 ```bash
 docker-compose up
 ```
+OR
 
+#Debian/Ubuntu系统
+```bash
+apt-get -y install git
+```
+#CentOS/RHEL系统
+```bash
+yum -y install git
+```
+#安装GDLIST
+```bash
+git clone https://github.com/reruin/gdlist.git
+cd gdlist
+docker-compose up -d
+```
 访问 `http://localhost:33001` 
 WebDAV 目录 `http://localhost:33001/webdav` 
 
