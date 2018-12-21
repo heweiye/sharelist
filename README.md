@@ -150,7 +150,8 @@ echo "a.com {
     header_upstream X-Forwarded-Proto {scheme}
   }
  gzip
-}" > /usr/local/caddy/Caddyfile
+}" >> /usr/local/caddy/Caddyfile
+/etc/init.d/caddy restart
 ```
 
 
