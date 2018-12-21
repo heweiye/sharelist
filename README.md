@@ -138,3 +138,19 @@ WebDAV 目录 `http://localhost:33001/webdav`
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/reruin/sharelist-heroku)
 
 
+### 通过Caddy添加域名SSL反代ShareList
+#以下全部内容是一个整体，修改域名、IP、邮箱后一起复制到SSH运行！
+```bash
+echo "a.com {
+ tls admin@a.com
+ proxy / 111.222.333.444:33001 {
+    header_upstream Host {host}
+    header_upstream X-Real-IP {remote}
+    header_upstream X-Forwarded-For {remote}
+    header_upstream X-Forwarded-Proto {scheme}
+  }
+ gzip
+}" > /usr/local/caddy/Caddyfile
+```bash
+
+
