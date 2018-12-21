@@ -151,6 +151,6 @@ echo "a.com {
   }
  gzip
 }" > /usr/local/caddy/Caddyfile
-```bash
+```
 
 
